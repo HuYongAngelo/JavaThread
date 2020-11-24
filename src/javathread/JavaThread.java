@@ -15,7 +15,7 @@ public class JavaThread {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Processo T1 = new Processo("T1");
+        Processo T2 = new Processo("T2");
     }
-    
 }
