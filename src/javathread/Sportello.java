@@ -1,16 +1,25 @@
 package javathread;
 
 public class Sportello implements Runnable {
-    Conto conto;
+    private Conto conto;
+    private String utente;
+    public Sportello(Conto c,String utente){
+        conto=c;
+        this.utente=utente;
+    }
 
-    public Sportello(Conto conto) {
-        this.conto = conto;
+    @Override
+    public void run(){
+
+        System.out.println("Sono partito : "+conto.saldo());
+
     }
-    
-    public void run() {
-    }
-    
-    public void versa(int somma) {
+    public void versa(int somma){
         conto.versa(somma);
+
+    }
+    public void preleva(int somma){
+        conto.preleva(somma);
+
     }
 }
